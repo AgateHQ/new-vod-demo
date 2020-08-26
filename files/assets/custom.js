@@ -92,9 +92,7 @@ $("#play").click(function() {
 
   function updateWallet() {
     n = v.currentTime;
-    console.log(n);
     if (n >= 110 && n <= 269) {
-
       $("#approve").click(function(){
         v.removeEventListener('timeupdate', update);
         v.removeEventListener('onseeked', update);
