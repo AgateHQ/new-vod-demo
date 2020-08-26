@@ -1,0 +1,312 @@
+html, body {
+
+}
+
+#playeritv {
+    display:none;
+}
+
+.fee {
+    position: relative; 
+    z-index: 100000000;
+    top: 364px;
+    right: -580px;
+    background-color: #500;
+    height: 50px;
+    width: 50px;
+}
+
+
+
+#fee {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  float: right;
+  top: 45%;
+  right: 20px;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#axate {
+    display: none;
+    position: absolute;
+    z-index: 0;
+    float: right;
+    bottom: 19px;
+    right: 10px;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+#bar {
+    position: absolute;
+    z-index: 1;
+    top:450px;
+    width: 100%;
+    height:50px;
+    background-color:transparent;
+}
+
+.paymentDue {
+    display: none;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 472px;
+    right: -305px;
+    z-index: 5;
+}
+
+#balanceDue {
+  position: absolute;
+  z-index: 1;
+  top: 92.5%;
+  left: 170px;
+  float: left;
+}
+#walletOpen {
+  position: fixed;
+  top: 30%;
+  left: 0px;
+  padding:10px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10001;
+  background-color: #00A978;
+}
+#wallet {
+  position: fixed;
+  float:left;
+  overflow: hidden;
+  top: 18%;
+  height: 420px;
+  width: 0px;
+  background-color: #323B50;
+  z-index: 10000;
+  font-size:14px;
+}
+#success {
+  display:none;
+}
+
+/* Add padding and border to inner content
+for better animation effect */
+.box-inner{
+  width: 300px;
+  padding: 10px;
+}
+
+
+/* .logo-axate {
+  position: absolute;
+  z-index: 10000;
+  top:3%;
+  float:right;
+} */
+
+/* Overlay Screen - Balance */
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    z-index: 100000;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 3px;
+    right: 15px;
+    font-size: 30px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.custom-wrapper {
+    position: relative; 
+    padding:60px;
+    z-index: 10;
+    max-width: 55em;
+    margin: 0 auto;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #00A978;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #00A978;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#balancePrice {
+  margin-top:20px;
+  font-size:32px;
+}
+
+.overlay-content .total {
+  margin-bottom:50px;
+}
+
+.col {
+  float:left;
+  width: 50%;
+}
+
+.topup {
+  background-color: grey;
+  border: none;
+  color: white;
+  margin-top:35px;
+  padding: 8px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size:12px;
+  border-radius:100px;
+}
+.decline {
+  background-color: red;
+  border: none;
+  color: white;
+  margin-top:35px;
+  padding: 8px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size:12px;
+  border-radius:100px;
+}
+#approve {
+  background-color: #00a978;
+  border: none;
+  color: white;
+  margin-top:35px;
+  padding: 8px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size:12px;
+  border-radius:100px;
+}
+
+@media not all and (min-resolution:.001dpcm) { 
+  @media {
+    #balanceDue {
+      position: absolute;
+      z-index: 1;
+      top: 92.5%;
+      left: 310px;
+      float: left;
+  }
+  }
+}
+
+.stage__player.is-hoverable{
+  background: url('covervideo.jpg');
+  background-size: cover;
+}
